@@ -1,0 +1,12 @@
+table
+  thead
+    tr
+      td Title
+      td Thumbnail
+      td Payout
+  tbody
+    - @content.each do |offer|
+      tr
+        td= offer['title']
+        td= image_tag offer['thumbnail']['lowres']
+        td= offer['payout']

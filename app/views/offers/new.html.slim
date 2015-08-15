@@ -1,0 +1,15 @@
+= form_for @offer_request, url: offers_path do |f|
+  div
+    - @offer_request.errors.full_messages.each do |m|
+      p = m
+  div
+    = f.label 'uid'
+    = f.text_field :uid
+  div
+    = f.label 'pub0'
+    = f.text_field :pub0
+  div
+    = f.label 'page'
+    = f.text_field :page
+  div
+    = f.submit
